@@ -7,10 +7,10 @@ import Todo from './Todo'
 //Each time we have
 //Since we are calling an object now we are going to use different elements with properties
 
-export default function TodoList({todos}) {
+export default function TodoList({todos, toggleTodo }) {
   return (
     todos.map(todo => {
-      return <Todo key={todo.id} todo={todo}/>
+      return <Todo key={todo.id} toggleTodo={toggleTodo} todo={todo}/>
     })
   )
 }
